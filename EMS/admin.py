@@ -12,6 +12,12 @@ class CustomUserAdmin(UserAdmin):
     fieldsets = (
         (('User'), {'fields': ('username','teacher_id','first_name','last_name','email','password','course','semester','branch','subject','role')}),
     )
+    
+    add_fieldsets = (
+
+        (('User'), {'fields': ('username','teacher_id','first_name','last_name','email','password1','password2','course','semester','branch','subject','role')}),
+
+    )
 
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Request)
